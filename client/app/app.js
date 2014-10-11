@@ -29,6 +29,10 @@ angular.module('shortly', [
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
     })
+    .when('/signout', {
+      templateUrl: 'app/auth/signin.html',
+      controller: 'AuthController'
+    })
     .otherwise({
       templateUrl: 'app/links/links.html',
       controller: 'LinksController'

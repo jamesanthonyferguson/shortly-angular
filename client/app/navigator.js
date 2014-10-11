@@ -1,17 +1,14 @@
 angular.module('shortly.nav', [])
 
-.controller('NavController', function ($scope) {
-  $scope.headers = {signin: true, signup: true, links: true, shorten: true, logOut: true}
+.controller('NavController', function ($scope, Auth) {
+  // $scope.headers = {signin: !Auth.isAuth(), signup: !Auth.isAuth(), links: Auth.isAuth(), shorten: Auth.isAuth(), signout: Auth.isAuth()}
+  $scope.headers = {signin: true, signup: true, links: true, shorten: true, signout: true}
+  // $scope.signout = function(){
+  //   console.log('signing out')
+  //   Auth.signout();
+  //   $scope.headers = {signin: !Auth.isAuth(), signup: !Auth.isAuth(), links: Auth.isAuth(), shorten: Auth.isAuth(), signout: Auth.isAuth()}
+  // };
 
-  $scope.logOut = function(){
-    $scope.headers = {
-      signin: true, signup: true, links: false, shorten: false, logOut: false
-    }
-  };
-
-  $scope.logIn = function(){
-    $scope.headers = {signin: false, signup: false, links: true, shorten: true, logOut: true}
-  };
 })
 .directive('navigator', function(){
   return {

@@ -1,10 +1,20 @@
 <div id='container' ng-controller="LinksController">
+  <input class="linksearch" type="text" ng-model = "search"/>
 
-  <div ng-repeat="link in data">
-    <span>title: {{ link.title }}</span>
-    <span>url {{ link.url }}</span>
-    <span>shortened url: {{ link.short }}</span>
-    <span>visits {{ link.visits }}</span>
-  </div>
-
+  <table>
+    <tr class="link2" ng-repeat="link in data | filter: search | orderBy : 'visits':true">
+        <td class="linktitle">
+          <a href="/api/links/{{ link.code }}">{{ link.title }}</a>
+        </td>
+        <td class="linkurl">
+          <a href="/api/links/{{ link.code }}">{{ link.url }}</a>
+        </td>
+        <td class="linkshort">
+          <a href="/api/links/{{ link.code }}">localhost:3000/api/links/<span class="bold">{{ link.code }}</span></a>
+        </td>
+        <td class="linkvisits">
+          <a href="/api/links/{{ link.code }}">{{ link.visits }} visits</a>
+        </td>
+    </tr>
+  </table>
 </div>

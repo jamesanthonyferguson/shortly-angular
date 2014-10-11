@@ -166,3 +166,48 @@ input[type=url]:focus {
 span + span {
   margin-right: 30px;
 }
+
+td {
+  padding: 2px 10px 2px 10px;
+}
+
+.linksearch {
+  margin: 6px 0px 12px 20px;
+  border-radius: 3px;
+}
+
+.linktitle {
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+.linkurl {
+  margin-left: 30px;
+  font-style: italic;
+  font-size: 12px;
+}
+.linkshort {
+  font-size: 16px;
+}
+.bold {
+  font-weight: bold;
+}
+.linkvisits {
+  border: rgba(50, 150, 50, 0.4) solid 2px;
+  color: rgba(30,100,30,0.8);
+  font-size: 18px;
+  border-radius: 2px;
+  padding: 3px 4px 3px 4px;
+}
+.linkvisits:hover {
+  background: rgba(50, 150, 50, 0.1);
+}
+
+tr:hover {
+  background: rgba(50, 150, 50, 0.1);
+}
+
+.link2 {
+  margin: 15px 0px 4px 0px;
+}
