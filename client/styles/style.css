@@ -146,3 +146,13 @@ input[type=url]:focus {
   clear: both;
 }
 
+.ng-dirty .ng-invalid {
+  border: red solid 4px;
+  padding: 10px;
+  margin: 0 10px;
+}
+.ng-dirty .ng-valid {
+  border: #efe solid 2px;
+  padding: 10px;
+  margin: 0 10px;
+}

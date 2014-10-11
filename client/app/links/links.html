@@ -1,3 +1,10 @@
-<div id='container'>
-  <!-- Your html here -->
+<div id='container' ng-controller="LinksController">
+
+  <div ng-repeat="link in data">
+    <span>title: {{ link.title }}</span>
+    <span>url {{ link.url }}</span>
+    <span>shortened url: {{ link.short }}</span>
+    <span>visits {{ link.visits }}</span>
+  </div>
+
 </div>
