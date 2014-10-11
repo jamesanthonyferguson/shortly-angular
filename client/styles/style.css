@@ -147,12 +147,22 @@ input[type=url]:focus {
 }
 
 .ng-dirty .ng-invalid {
-  border: red solid 4px;
+  border: rgba(180,20,20, 0.6) solid 2px;
+  border-radius: 2px;
   padding: 10px;
   margin: 0 10px;
 }
 .ng-dirty .ng-valid {
-  border: #efe solid 2px;
+  border: rgba(50, 150, 50, 0.4) solid 2px;
   padding: 10px;
   margin: 0 10px;
+}
+
+.navbar {
+  width: 100%;
+  border: rgba(50, 150, 50, 0.4) solid 3px;
+  border-left-style:none;
+}
+span + span {
+  margin-right: 30px;
 }

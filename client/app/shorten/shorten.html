@@ -1,10 +1,8 @@
 <div id='container'>
 <!-- Your code here -->
-  <form ng-controller="ShortenController" ng-submit="addLink()">
-    <input type="text" ng-model="link.url"/>
+  <form name="linkform" novalidate ng-controller="ShortenController" ng-submit="addLink(linkform.$valid)">
+    <input type="url" ng-model="link.url" ng-pattern=/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/>
     <button type="submit"></button>
   </form>
   <!--Maybe add something here -->
 </div>
-
-
